@@ -1,0 +1,106 @@
+🏥 MEDIPEDIA
+│
+├── Inicio
+├── Historia de la Medicina
+├── Anatomía Humana
+│   ├── Sistema Nervioso
+│   ├── Sistema Respiratorio
+│   ├── Sistema Digestivo
+│   ├── Sistema Cardiovascular
+│   ├── Sistema Muscular
+│   └── Sistema Óseo
+│
+├── Medicamentos
+│   ├── ¿Qué son?
+│   ├── ¿De dónde provienen?
+│   │   ├── Plantas
+│   │   ├── Minerales
+│   │   ├── Bacterias y hongos
+│   │   └── Síntesis química
+│   │
+│   ├── Analgésicos
+│   ├── Antibióticos
+│   ├── Antivirales
+│   ├── Antihistamínicos
+│   ├── Vacunas
+│   └── Antiinflamatorios
+│
+├── Enfermedades
+│   ├── Infecciosas
+│   ├── Genéticas
+│   ├── Autoinmunes
+│   ├── Cardiovasculares
+│   ├── Respiratorias
+│   └── Neurológicas
+│
+├── Diagnóstico
+│   ├── Radiografías
+│   ├── TAC
+│   ├── Resonancia Magnética
+│   ├── Ecografía
+│   └── Análisis Clínicos
+│
+├── Especialidades
+│   ├── Cardiología
+│   ├── Neurología
+│   ├── Oncología
+│   ├── Pediatría
+│   ├── Dermatología
+│   └── Psiquiatría
+│
+├── Cirugía
+│   ├── General
+│   ├── Cardíaca
+│   ├── Plástica
+│   ├── Neurocirugía
+│   └── Trasplantes
+│
+├── Primeros Auxilios
+│
+├── Medicina Moderna
+│   ├── IA Médica
+│   ├── Robots Quirúrgicos
+│   ├── Terapia Génica
+│   └── Nanomedicina
+│
+└── Contacto
+<section class="enfermedad">
+    <h2>Diabetes Tipo 2</h2>
+
+    <h3>¿Qué es?</h3>
+    <p>
+        Enfermedad crónica caracterizada por niveles elevados de glucosa
+        en sangre debido a resistencia a la insulina.
+    </p>
+
+    <h3>Síntomas</h3>
+    <ul>
+        <li>Sed excesiva</li>
+        <li>Fatiga</li>
+        <li>Pérdida de peso</li>
+        <li>Visión borrosa</li>
+    </ul>
+
+    <h3>Tratamiento</h3>
+    <p>
+        Dieta saludable, ejercicio físico y medicamentos
+        prescritos por profesionales sanitarios.
+    </p>
+</section>
+<input type="number" id="peso" placeholder="Peso en kg">
+<input type="number" id="altura" placeholder="Altura en metros">
+<button onclick="calcularIMC()">Calcular</button>
+
+<p id="resultado"></p>
+
+<script>
+function calcularIMC(){
+    let peso = parseFloat(document.getElementById("peso").value);
+    let altura = parseFloat(document.getElementById("altura").value);
+
+    let imc = peso/(altura*altura);
+
+    document.getElementById("resultado").innerHTML =
+        "Tu IMC es " + imc.toFixed(2);
+}
+</script>
